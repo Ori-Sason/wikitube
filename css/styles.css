@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 1em;
+  font-family: sans-serif;
+  background-color: #124c70;
+  color: whitesmoke;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+p {
+  margin: 0.5em 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 2em;
+  min-height: 600px;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+}
+
+header h1{
+  margin: 0;
+  font-size: 2.5em;
+  background-color: rgb(223, 35, 35);
+  padding: 0.1em 0.4em;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #262525db;
+}
+
+header .search {
+  width: 500px;
+  width: 100%;
+  display: flex;
+  gap: 0.5em;
+}
+
+header .search input {
+  flex-grow: 1;
+  font-size: large;
+  padding: 0.5em;
+}
+
+header .search button {
+  padding: 1em;
+  background-color: #04334f;
+  border: 1px solid black;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+header .search button:hover{
+  background-color: #033856;
+}
+
+/* VIDEO PLAYER */
+.video-player {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-player .video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.video-player iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* INFO */
+
+.wikipedia h2:first-of-type {
+  margin-top: 0;
+}
+
+.videos-list {
+  flex-basis: 48%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1em;
+}
+
+.videos-list article {
+  padding-inline-end: 0.5em;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 6px;
+  background-color: #021b2a;
+  box-shadow: 0.5px 0.5px 0.8px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.video-player .video-publisher:hover,
+.wikipedia h2 a:hover,
+.videos-list .video-publisher:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.videos-list img {
+  align-self: stretch;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 1em;
+}

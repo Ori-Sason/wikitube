@@ -1,0 +1,47 @@
+@media screen and (min-width: 600px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header .search {
+    width: 500px;
+  }
+
+  .video-player .video {
+    aspect-ratio: unset;
+    min-height: 500px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .main-section {
+    display: grid;
+    grid-template-columns: 60% 35%;
+    grid-template-rows: min-content auto;
+    grid-template-areas:
+      'header header'
+      'video wiki';
+
+    gap: 2em;
+    margin-bottom: 2em;
+    min-height: 600px;
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  .video-player {
+    grid-area: video;
+  }
+
+  .video-player .video {
+    height: 100%;
+  }
+
+  .wikipedia {
+    grid-area: wiki;
+  }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/mq.css" />
+    <title>WikiTube</title>
+  </head>
+  <body onload="app.onInit()">
+    <section class="main-section">
+      <header>
+        <h1>WikiTube</h1>
+        <form onsubmit="app.onSearch(event)" class="search">
+          <input type="text" />
+          <button type="submit">Search</button>
+        </form>
+      </header>
+
+      <section class="video-player">
+        <!-- main video is rendered here -->
+      </section>
+
+      <section class="wikipedia"></section>
+    </section>
+
+    <section class="videos-list">
+      <!-- videos list is rendered here -->
+    </section>
+
+    <script src="js/lib/axios.js"></script>
+    <script type="module" src="js/app.controller.js"></script>
+  </body>
+</html>
